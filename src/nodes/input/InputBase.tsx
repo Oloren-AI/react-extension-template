@@ -8,10 +8,11 @@ export type InputData = {
 };
 
 function InputBase({ node, setNode }: NodeProps<InputData>) {
+  const data = node.data as InputData;
   return (
     <div tw="flex flex-col space-y-2 w-[500px]">
       <Input
-        value={node.data?.label}
+        value={data?.label}
         tw="w-full"
         addonBefore={"Label"}
         onChange={(e) => {
@@ -25,7 +26,7 @@ function InputBase({ node, setNode }: NodeProps<InputData>) {
         }}
       />
       <Input
-        value={node.data?.placeholder}
+        value={data?.placeholder}
         addonBefore={"Placeholder"}
         onChange={(e) => {
           setNode((node) => ({
