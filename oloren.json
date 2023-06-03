@@ -1,0 +1,24 @@
+{
+  "$schema": "https://oloren-ai.github.io/schema/extensionconfig.schema.json",
+  "name": "sample_extension",
+  "version": "0.0.0",
+  "nodes": [
+    {
+      "name": "Input Node",
+      "path": "./src/nodes/input/InputBase.tsx",
+      "num_inputs": 0,
+      "num_outputs": 1,
+      "applet": {
+        "path": "./src/nodes/input/InputApplet.tsx"
+      }
+    },
+    {
+      "name": "Backend Example",
+      "path": "./src/nodes/submitapplet/Base.tsx",
+      "applet": {
+        "path": "./src/nodes/submitapplet/Applet.tsx",
+        "hidden": true
+      }
+    }
+  ]
+}
