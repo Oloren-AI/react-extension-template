@@ -56,7 +56,7 @@ function DisplayMol({ smiles, window }: { smiles: string; window: any }) {
   }, [window]);
 
   useEffect(() => {
-    if (loaded) {
+    if (loaded && !svg) {
       const mol = window.RDKit.get_mol(smiles);
       const svg = mol.get_svg();
       console.log("SVG: ", svg);
