@@ -13,6 +13,15 @@
       }
     },
     {
+      "name": "Display Molecule",
+      "path": "./src/nodes/displaymol/Base.tsx",
+      "num_inputs": 0,
+      "num_outputs": 1,
+      "applet": {
+        "path": "./src/nodes/displaymol/Applet.tsx"
+      }
+    },
+    {
       "name": "Backend Example",
       "path": "./src/nodes/submitapplet/Base.tsx",
       "applet": {
