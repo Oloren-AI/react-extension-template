@@ -32,6 +32,16 @@
       }
     },
     {
+      "name": "Show Protein",
+      "path": "./src/nodes/molstar/Base.tsx",
+      "initial_data": "1LOL",
+      "num_inputs": 0,
+      "num_outputs": 1,
+      "applet": {
+        "path": "./src/nodes/molstar/Applet.tsx"
+      }
+    },
+    {
       "name": "Backend Example",
       "path": "./src/nodes/submitapplet/Base.tsx",
       "applet": {
