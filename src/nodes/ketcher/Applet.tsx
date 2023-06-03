@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { StandaloneStructServiceProvider } from "ketcher-standalone";
-import { Editor } from "ketcher-react";
-import "ketcher-react/dist/index.css";
-import type { Ketcher } from "ketcher-core";
 import { ApplicationProps } from "@oloren/core";
 import { Button } from "antd";
-import { flushSync } from "react-dom";
+import type { Ketcher } from "ketcher-core";
+import { Editor } from "ketcher-react";
+import "ketcher-react/dist/index.css";
+import { StandaloneStructServiceProvider } from "ketcher-standalone";
+import React from "react";
 
 let ketcher: Ketcher | null = null;
 const structServiceProvider = new StandaloneStructServiceProvider();
