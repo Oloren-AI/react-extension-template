@@ -22,6 +22,16 @@
       }
     },
     {
+      "name": "Draw Molecule",
+      "path": "./src/nodes/ketcher/Base.tsx",
+      "num_inputs": 0,
+      "num_outputs": 1,
+      "applet": {
+        "path": "./src/nodes/ketcher/Applet.tsx",
+        "continue": false
+      }
+    },
+    {
       "name": "Backend Example",
       "path": "./src/nodes/submitapplet/Base.tsx",
       "applet": {
