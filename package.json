@@ -25,15 +25,16 @@
     "webpack-dev-server": "4.11.1"
   },
   "scripts": {
-    "uidev": "webpack-cli serve",
+    "postinstall": "mkdir -p static && cp -R node_modules/@rdkit/rdkit/dist/RDKit_* static",
     "dev": "concurrently --kill-others \"nodemon \" \"pnpm run serve\"",
     "build": "webpack --mode production",
-    "serve": "serve dist -p ${PORT:-8080}",
+    "serve": "serve dist -C -p ${PORT:-8080}",
     "clean": "rm -rf dist"
   },
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
-    "@oloren/core": "^0.1.3",
+    "@oloren/core": "^0.1.4",
+    "@rdkit/rdkit": "2023.3.1-1.0.1",
     "antd": "^5.5.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",

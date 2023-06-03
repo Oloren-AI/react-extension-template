@@ -17,7 +17,8 @@ function Applet({
   useDynamicScript,
 }: ApplicationProps<string, [], []>) {
   const { ready, errorLoading, window } = useDynamicScript(
-    "https://unpkg.com/@rdkit/rdkit/dist/RDKit_minimal.js"
+    "/RDKit_minimal.js",
+    true
   );
 
   useEffect(() => {
@@ -42,7 +43,8 @@ function DisplayMol({ smiles, window }: { smiles: string; window: any }) {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    if (!window.RDKit)
+    if (!window.RDKit) {
+      console.log("RDKIT initter: ", window.initRDKitModule);
       window
         .initRDKitModule()
         .then(function (RDKit: any) {
@@ -51,8 +53,9 @@ function DisplayMol({ smiles, window }: { smiles: string; window: any }) {
           setLoaded(true);
         })
         .catch((e: Error) => {
-          alert("Error loading RDKit");
+          console.log("Error loading rdkit: ", e);
         });
+    }
   }, [window]);
 
   useEffect(() => {
