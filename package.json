@@ -33,7 +33,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.1.4",
+    "@ant-design/icons": "^4.1.2",
     "@oloren/core": "^0.1.6",
     "@rdkit/rdkit": "2023.3.1-1.0.1",
     "antd": "^5.5.2",

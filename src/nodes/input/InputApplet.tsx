@@ -1,7 +1,7 @@
 import { ApplicationProps } from "@oloren/core";
 import React from "react";
 import { InputData } from "./InputBase";
-import { Input } from "antd";
+import Helper from "./Helper";
 
 function InputUi({
   node,
@@ -10,15 +10,16 @@ function InputUi({
   done,
 }: ApplicationProps<InputData, [], [string]>) {
   return (
-    <Input
-      addonBefore={node.data.label}
-      tw="w-full"
-      value={outputs}
-      placeholder={node.data.placeholder}
-      onChange={(e) => {
-        setOutputs([e.target.value]);
-      }}
-    />
+    <Helper name="hello" />
+    // <Input
+    //   addonBefore={node.data.label}
+    //   tw="w-full"
+    //   value={outputs}
+    //   placeholder={node.data.placeholder}
+    //   onChange={(e) => {
+    //     setOutputs([e.target.value]);
+    //   }}
+    // />
   );
 }
 
